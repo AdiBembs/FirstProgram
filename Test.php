@@ -9,30 +9,30 @@
 
 declare(strict_types=1);
 
-use FirstProgram\FourLetterWord\Test;
+use FirstProgram\FourLetterWord\TestCase;
 
-final class FourLetterWord extends Test
+final class Test extends TestCase
 {
-    public function testCanBeCreatedFromValidEmailAddress(): void
+    public function testCanBeCreatedFromValidFourLetterWordString(): void
     {
         $this->assertInstanceOf(
-            Email::class,
-            Email::fromString('user@example.com')
+            Test::class,
+            Test::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 
-    public function testCannotBeCreatedFromInvalidEmailAddress(): void
+    public function testCannotBeCreatedFromInvalidFourLetterWordString(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
-        Email::fromString('invalid');
+        Test::fromString('invalid');
     }
 
     public function testCanBeUsedAsString(): void
     {
         $this->assertEquals(
-            'user@example.com',
-            Email::fromString('user@example.com')
+            ('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+            Email::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 }
