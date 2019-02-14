@@ -24,7 +24,6 @@ final class Test extends TestCase
     public function testCannotBeCreatedFromInvalidFourLetterWordString(): void
     {
         $this->expectException(InvalidArgumentException::class);
-
         Test::fromString('invalid');
     }
 
