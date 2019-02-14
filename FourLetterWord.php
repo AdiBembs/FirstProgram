@@ -13,7 +13,7 @@ class FourLetterWord
 
     private function __construct(string $UserWord)
     {
-        $this->ensureIsValidEmail($UserWord);
+        $this->ensureIsFourLetters($UserWord);
 
         $this->UserWord = $UserWord;
     }
@@ -28,12 +28,15 @@ class FourLetterWord
         return $this->UserWord;
     }
 
-    private function ensureIsValidEmail(string $UserWord): void
+    /**
+     * @param string $UserWord
+     */
+    private function ensureIsFourLetters(string $UserWord): void
     {
-        if (!filter_var($UserWord, FILTER_VALIDATE_EMAIL)) {
+        if (strlen($UserWord) != 4) {
             throw new InvalidArgumentException(
                 sprintf(
-                    '"%s" is not a valid email address',
+                    '"%s" is not a four letter word',
                     $UserWord
                 )
             );
