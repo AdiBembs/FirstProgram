@@ -31,7 +31,7 @@ final class Test extends TestCase
     {
         $this->assertEquals(
             ('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
-            Email::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            Test::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 }
