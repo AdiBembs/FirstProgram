@@ -11,27 +11,27 @@ declare(strict_types=1);
 
 use FirstProgram\FourLetterWord\TestCase;
 
-final class Test extends TestCase
+final class FourLetterWordTest extends TestCase
 {
     public function testCanBeCreatedFromValidFourLetterWordString(): void
     {
         $this->assertInstanceOf(
-            Test::class,
-            Test::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            FourLetterWordTest::class,
+            FourLetterWordTest::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 
     public function testCannotBeCreatedFromInvalidFourLetterWordString(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        Test::fromString('invalid');
+        FourLetterWordTest::fromString('invalid');
     }
 
     public function testCanBeUsedAsString(): void
     {
         $this->assertEquals(
-            ('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
-            Test::fromString('abcdefghijklmnopqrstuvwx', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            ('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+            FourLetterWordTest::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 }
