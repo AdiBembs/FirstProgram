@@ -16,22 +16,22 @@ final class FourLetterWordTest extends TestCase
     public function testCanBeCreatedFromValidFourLetterWordString(): void
     {
         $this->assertInstanceOf(
-            FourLetterWordTest::class,
-            FourLetterWordTest::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            FourLetterWord::class,
+            FourLetterWord::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 
     public function testCannotBeCreatedFromInvalidFourLetterWordString(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        FourLetterWordTest::fromString('invalid');
+        FourLetterWord::fromString('invalid');
     }
 
     public function testCanBeUsedAsString(): void
     {
         $this->assertEquals(
             ('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
-            FourLetterWordTest::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            FourLetterWord::fromString('abcdefghijklmnopqrstuvwx'), ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         );
     }
 }
