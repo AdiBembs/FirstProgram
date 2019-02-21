@@ -28,5 +28,5 @@ sprintf - returns a string produced according to the formatting string. It has t
 static - declaring class properties or methods as static makes them accessible without needing an instantiation of the class. 
 A property declared as static cannot be accessed with an instantiated class object (though a static method can).
 assertClassHasAttribute - If a certain method or variable does not exist in the class, an error will be thrown.
-method_exists - 
-float -
+method_exists - Checks if the class method exists in the given object and is called before specified object parameters.
+float - a number with a decimal point or a number in exponential form. It may be used anywhere as a variable,
