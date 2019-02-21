@@ -21,9 +21,9 @@ int -  called by the constructor, and is used to not have to rewrite the constru
 the actual init() function is not used in PHP instead _contruct is used after a class is declared.
 return - causes the function to end its execution immediately and pass control back to the line from which it was called. To return 
 a reference from a function you can use it where you declare the function and when assigning the returned value to a variable.
-self - 
-new - 
-throw - 
+self - are used to access properties or methods. It is used inside the class definition.
+new - is an object, and you can use the new statement to instantiate a class
+throw - a generic exception where you instantiate an exception object—with the first parameter of the Exception constructor being the error message—and then, "throw" it.
 sprintf - 
 static - 
 assertClassHasAttribute - If a certain method or variable does not exist in the class, an error will be thrown.
