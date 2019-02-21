@@ -19,7 +19,8 @@ string -  variables that contain alphanumeric characters and are created when yo
 and when you can directly use them with echo statement. 
 int -  called by the constructor, and is used to not have to rewrite the constructor itself.
 the actual init() function is not used in PHP instead _contruct is used after a class is declared.
-return - 
+return - causes the function to end its execution immediately and pass control back to the line from which it was called. To return 
+a reference from a function you can use it where you declare the function and when assigning the returned value to a variable.
 self - 
 new - 
 throw - 
