@@ -17,7 +17,8 @@ assertEquals - If two variables arent equal to each other, than an error is thro
 private - Private variables or methods can only be accessed in the class where it has been defined in
 string -  variables that contain alphanumeric characters and are created when you declare variable and assign string characters to it
 and when you can directly use them with echo statement. 
-int -  
+int -  called by the constructor, and is used to not have to rewrite the constructor itself.
+the actual init() function is not used in PHP instead _contruct is used after a class is declared.
 return - 
 self - 
 new - 
