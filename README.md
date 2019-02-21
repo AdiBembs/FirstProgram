@@ -24,8 +24,9 @@ a reference from a function you can use it where you declare the function and wh
 self - are used to access properties or methods. It is used inside the class definition.
 new - is an object, and you can use the new statement to instantiate a class
 throw - a generic exception where you instantiate an exception object—with the first parameter of the Exception constructor being the error message—and then, "throw" it.
-sprintf - 
-static - 
+sprintf - returns a string produced according to the formatting string. It has two parameters
+static - declaring class properties or methods as static makes them accessible without needing an instantiation of the class. 
+A property declared as static cannot be accessed with an instantiated class object (though a static method can).
 assertClassHasAttribute - If a certain method or variable does not exist in the class, an error will be thrown.
 method_exists - 
-float - 
+float -
